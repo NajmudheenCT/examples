@@ -71,13 +71,12 @@ root@root:/prometheus/prometheus-2.20.0.linux-amd64# ./prometheus
 #### Note:
 
   There are two exporters supported as of now for performance collection, prometheus and kafka. To enable the exporters,
-  environment variable need to set as True. Whichever value is set as True, will be enabled for collection
+  uncomment performance_exporters option in <delfin_path>/etc/delffin/delfin.conf as below to enable exporter for prometheus and kafka  
 
   Ex:
    ```
-     export KAFKA=True
-     
-     export PROMETHEUS=True
+# Uncomment or add exporters
+performance_exporters = PerformanceExporterPrometheus, PerformanceExporterKafka
    ```
 
 3. Follow this [link](https://github.com/sodafoundation/delfin/blob/master/installer/README.md) to install delfin
